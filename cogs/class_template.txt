@@ -1,0 +1,14 @@
+#### THIS IS A TEMPLATE OF WHAT A CLASS SHOULD LOOK LIKE
+
+import disnake
+from disnake.ext import commands
+
+
+class Hello(commands.Cog):
+    """ Sends hello message """
+
+    def __init__(self, bot: commands.Bot):
+        self.bot = bot
+
+def setup(bot: commands.Bot):
+    bot.add_cog(Hello(bot))
