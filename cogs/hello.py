@@ -3,7 +3,7 @@
 # commands: Submodule for defining commands and cogs
 import disnake
 from disnake.ext import commands
-import milestone
+import cogs.milestone as milestone
 
 
 # Define a class called "Hello" that extends commands.Cog
