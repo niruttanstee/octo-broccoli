@@ -3,7 +3,7 @@
 # commands: Submodule for defining commands and cogs
 import disnake
 from disnake.ext import commands
-import cogs.milestone as milestone
+from cogs.milestone import count_command
 
 
 # Define a class called "Hello" that extends commands.Cog
@@ -18,7 +18,7 @@ class Hello(commands.Cog):
     # and sends the message "Hello <3" as a response
     @commands.slash_command(description="Says Hello")
     async def hello(self, inter: disnake.ApplicationCommandInteraction):
-        await milestone.count_command()  # Counts the number command calls for milestone
+        await count_command()  # Counts the number command calls for milestone tracking
         await inter.response.send_message("Hello <3")
 
     # Useful comments
